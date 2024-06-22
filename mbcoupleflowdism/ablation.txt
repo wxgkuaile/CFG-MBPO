@@ -1,0 +1,30 @@
+(ok)1. container:test _22222的log文件是表示的for 10, length=length
+(ok)2. container:instance 不变的log文件是表示的是 for 100, length=1 no
+
+12.12
+(ok)1. container:instance 修改了rollout的batch=1000,pool=1e5 (可以达到渐近线，但是收敛速度慢)
+
+12.13
+1. container:test 修改 仅仅用SAC训练model，不用监督学习。参数：每个真实样本，1次训练模型，250个真实样本后更新模型，model最大更新次数是200
+
+12.15
+1. 171 将flow作为辨别器，选出flow_r大的轨迹
+
+
+
+尝试将flow修改成辨别器
+每个实验的每个环境跑5个种子
+
+function1 and function2
+1. 每个epoch记录 rewarder中r的大小
+
+function1
+1.目前测试的是 rollout_length=1, 可以测试rollout_length=[2,3,4,5...]的长度
+
+function2
+1. 确定性网络和非确定性网络的对比  --deter_model=False
+2. 不同predict length的实验对比 [3,6,9,12]；MPCHorizon=3,6,9
+3. MPC在选择动作是是确定的还是不确定的进行对比；DeterPoForMPC=False
+
+
+
